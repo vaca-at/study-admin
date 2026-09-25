@@ -200,7 +200,7 @@ function kidHTML(k){
     <p class="lbl">💌 아이에게 한마디 <span class="sub">(공부방 홈 화면에 보여요)</span></p>
     <div class="row"><input id="msg" class="grow" type="text" name="kid-note" autocomplete="off" maxlength="60" value="${esc(set.msg||'')}" placeholder="예: 오늘도 화이팅! 🍦"><button class="btn" data-act="saveMsg" data-v="${k.id}">저장</button></div>
     ${k.mom?`<p class="lbl">👩 엄마 비밀번호 <span class="sub">(${set.momH?'정해져 있어요':'아직 없어요'} · 정해서 엄마께 알려 주세요)</span></p>
-    <div class="row"><input id="momPin" class="pinbox" type="text" autocomplete="off" inputmode="numeric" maxlength="4" placeholder="4자리"><button class="btn" data-act="momPin" data-v="${k.id}">${set.momH?'바꾸기':'정하기'}</button>${set.momH?`<button class="pill warn" data-act="momDel" data-v="${k.id}">지우기</button>`:''}</div>`:''}
+    <div class="row"><input id="momPin" style="background:#fff;color:#1F3354;-webkit-text-fill-color:#1F3354;caret-color:#1F3354" class="pinbox" type="text" autocomplete="off" inputmode="numeric" maxlength="4" placeholder="4자리"><button class="btn" data-act="momPin" data-v="${k.id}">${set.momH?'바꾸기':'정하기'}</button>${set.momH?`<button class="pill warn" data-act="momDel" data-v="${k.id}">지우기</button>`:''}</div>`:''}
     <p class="lbl">🗑️ 기록 초기화 <span class="sub">(별 · 스티커 · 푼 문제 · 공부 시간 · 복습함. 아이 기기의 기록도 다음 접속 때 지워져요)</span></p>
     <button class="btn danger" data-act="reset" data-v="${k.id}">🗑️ ${k.name}의 기록 모두 지우기</button></div>`;
 }
